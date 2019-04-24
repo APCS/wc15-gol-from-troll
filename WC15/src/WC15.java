@@ -109,6 +109,9 @@ public class WC15
   public static void swapRows(int[][] mat, int rowAIndex, int rowBIndex)
   {
     //TODO: Finish
+    int [] temp = mat[rowAIndex];
+    mat[rowAIndex] = mat[rowBIndex];
+    mat[rowBIndex] = temp;
   }
 
   /**
