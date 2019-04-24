@@ -93,8 +93,30 @@ public class WC15
   public static String hateX(String str)
   {
     //TODO: Finish
-    return "no";
+    String newString = "";
+    if (str.substring(0, 2).equals("xx") && str.length() <= 3)
+    {
+     newString = str.substring(2);
+    }
+    else if (str.equals("xx") && str.length() > 3)
+    {
+      newString = "";
+    }
+    else if (str.substring(0, 1).equals("x") && !str.substring(1, 2).equals("x"))
+    {
+      newString = str.substring(1);
+    }
+    else if (!str.substring(0, 1).equals("x") && str.substring(1, 2).equals("x"))
+    {
+      newString = str.substring(0, 1) + str.substring(2);
+    }
+    else
+    {
+      newString = str;
+    }
+  return newString;
   }
+
 
   /**
    * Swaps all values in the specified 2 rows of mat.
