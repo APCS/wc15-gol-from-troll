@@ -31,7 +31,9 @@ public class WC15
   public static String centralThree(String letters)
   {
     //TODO: Finish
-    return "no";
+    int indexOfMiddle = (letters.length()/ 2) - 1;
+    String middleLetters = letters.substring(indexOfMiddle, indexOfMiddle + 3);
+    return middleLetters;
   }
 
   /**
