@@ -54,8 +54,26 @@ public class WC15
   public static String chopFront(String str)
   {
     //TODO: Finish
-    return "no";
-  }
+    String newString = "";
+      if (!str.substring(0, 1).equals("a") && !str.substring(1, 2).equals("b"))
+      {
+       newString = str.substring(2);
+      }
+      else if (str.substring(0, 1).equals("a") && !str.substring(1, 2).equals("b"))
+      {
+        newString = str.substring(0, 1) + str.substring(2);
+      }
+      else if (!str.substring(0, 1).equals("a") && str.substring(1, 2).equals("b"))
+      {
+        newString = str.substring(1);
+      }
+      else
+      {
+        newString = str;
+      }
+    return newString;
+    }
+  
 
   /**
    * 
