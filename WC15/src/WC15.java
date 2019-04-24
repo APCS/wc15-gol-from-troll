@@ -168,7 +168,15 @@ public class WC15
   public static String[][] fill2DWithLetters(String str, int rows, int cols)
   {
     //TODO: Finish
-    return new String[][] {{"42"}};
+    String [][] filledArray = new String[rows][cols];
+    for (int r = 0; r < filledArray.length; r++)
+    {
+      for (int c = 0; c < filledArray[0].length; c++)
+      {
+        filledArray[r][c] = str;
+      }
+    }
+    return filledArray;
   }
 
   /**
