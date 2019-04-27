@@ -149,6 +149,18 @@ public class WC15
   public static void swapColumns(int[][] mat, int colAIndex, int colBIndex)
   {
     //TODO: Finish
+	  for (int r = 0; r < mat.length; r++)
+	  {
+		  for (int c = 0; c < mat[0].length; c++)
+		  {
+			  if (c == colAIndex)
+			  {
+			    int temp = mat[r][colAIndex];
+			    mat[r][colAIndex] = mat[r][colBIndex];
+			    mat[r][colBIndex] = temp;
+			  }
+		  }
+	  }
   }
 
   /**
